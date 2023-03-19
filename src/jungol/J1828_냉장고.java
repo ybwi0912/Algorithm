@@ -29,17 +29,18 @@ public class J1828_냉장고 {
                 return Integer.compare(o1[1], o2[1]);
             }
         });
-
+        // 첫 번째 냉장고에 첫 번째 재료를 넣는다
         int max = material[0][1];
 
+        // 나머지 재료
         for(int i=0; i<N; i++){
             if(material[i][0] <= max){
                 if(material[i][1]<max){
                     max = material[i][1];
-                }
+                } // 앞 재료와 같은 냉장고에 재료 추가 후 최고 온도 갱신
                 continue;
             }
-            else{
+            else{ // 새로운 냉장고에 재료 추가
                 max = material[i][1];
                 count++;
             }
