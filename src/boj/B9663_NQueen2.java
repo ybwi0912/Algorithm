@@ -53,7 +53,7 @@ public class B9663_NQueen2 {
 //            }
 
             System.out.print(count + "번째 경우 ");
-            for(int i=0; i<N; i++) System.out.print(arr[selection[i]]);
+            //for(int i=0; i<N; i++) System.out.print(arr[selection[i]]);
             System.out.println();
             count++;
             return;
@@ -68,18 +68,5 @@ public class B9663_NQueen2 {
             isSelected[i] = false; // 중복 허용 X (마킹 해제)
 
         } // 분기
-    }
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        N = sc.nextInt(); // 크기가 N x N인 체스판
-        // 퀸 N개를 서로 공격할 수 없게 놓는 경우의 수
-        arr = new int[N];
-        selection = new int[N];
-        isSelected = new boolean[N];
-        for(int i=0; i<N; i++){
-            arr[i] = i;
-        }
-        permutation(0);
-        System.out.println(count);
-    }
+    }}
 }
