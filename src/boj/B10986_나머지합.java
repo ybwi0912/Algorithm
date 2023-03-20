@@ -1,4 +1,4 @@
-package boj_3월;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
