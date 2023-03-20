@@ -14,13 +14,12 @@ public class B13023_ABCDE {
     static int flag;
     static boolean[] isVisited;
 
-    static void DFS(int startV, int count) {
-        isVisited[startV] = true;
+    static void DFS(int startV, int count) { // count : depth 확인. 4보다 커지는 순간 조건이 True가 된다
+        isVisited[startV] = true; // 체크 ㅇ
         //System.out.println(count);
         if(count >= 4) {
             flag = 1;
-            System.out.println(count +" " + flag);
-            return;
+            return; // 종료 조건
         }
         //System.out.print(startV + " ");
         for(int nextNode : people[startV]) {
@@ -28,8 +27,9 @@ public class B13023_ABCDE {
 
             DFS(nextNode, count + 1);
 
-            isVisited[nextNode] = false;
-        }
+            isVisited[nextNode] = false; // 체크 해제 << 이 부분이 중요!
+        } // 백트래킹에서 가장 중요한 부분 !!
+        // 말단 노드를 만났거나 조건에 안 맞는 노드를 만났을 때
     }
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
@@ -60,7 +60,7 @@ public class B13023_ABCDE {
 
         flag = 0;
 
-        for(int i=0; i<N; i++){
+        for(int i=0; i<N; i++){ // 모든 노드에 대해서 탐색을 돌린다
             isVisited = new boolean[N];
             DFS(i, 0);
             // System.out.println();
