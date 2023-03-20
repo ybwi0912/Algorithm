@@ -1,4 +1,4 @@
-package chapter3;
+package DO_IT_chapter3;
 
 import java.util.Arrays;
 import java.util.Scanner;
