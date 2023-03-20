@@ -4,7 +4,11 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
-
+/**
+ * 23- 03 - 20
+ * 전상희
+ * 백준 13023번 - 사람 N명 중에서 A-B-C-D-E 친구 관계가 존재한다면 1, 없다면 0을 출력
+ * */
 public class B13023_ABCDE {
     static ArrayList<Integer>[] people;
     static int flag;
