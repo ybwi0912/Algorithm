@@ -64,7 +64,7 @@ public class B9663_NQueen2 {
 
             isSelected[i] = true;
             selection[n] = i;
-            permutation(n+1);
+            permutation(n+1); // 여기서 check 함수를 돌리는 식으로 구현할 수 있다
             isSelected[i] = false; // 중복 허용 X (마킹 해제)
 
         } // 분기
