@@ -19,7 +19,8 @@ public class B2750_수정렬하기 {
         }
         // input
 
-        bubbleSort(arr);
+        // bubbleSort(arr);
+        selectionSort(arr);
         // operation
 
         for(int i : arr){
@@ -41,6 +42,23 @@ public class B2750_수정렬하기 {
                 if(arr[j]>arr[j+1])
                     swap(arr, j, j+1);
             }
+        }
+    }
+
+    public static void selectionSort(int[] arr){
+        int index = 0;
+        int len = arr.length;
+        while(index < len){
+            int min = arr[index];
+            int minIdx = index;
+            for(int i=index; i<len; i++){
+                if(arr[i]<min){
+                    min = arr[i];
+                    minIdx = i;
+                }
+            }
+            swap(arr, minIdx, index);
+            index++;
         }
     }
 }
