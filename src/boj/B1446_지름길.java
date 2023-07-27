@@ -6,6 +6,7 @@ import java.util.*;
 /*
 * 2023-07-27
 * BOJ 1446: 지름길
+* 다익스트라
 * */
 
 public class B1446_지름길 {
@@ -45,7 +46,7 @@ public class B1446_지름길 {
         int index = 0; // 리스트 인덱스 확인 위한 변수
         int move = 0; // 어디까지 진행했는지 확인하기 위함
 
-        int[] dist = new int[101]; // padding(모든 위치와 기리는 10000보다 작거나 같은 자연수)
+        int[] dist = new int[101]; // padding(모든 위치와 길이는 10000보다 작거나 같은 자연수)
         Arrays.fill(dist, 10001);
         dist[0] = 0;
 
