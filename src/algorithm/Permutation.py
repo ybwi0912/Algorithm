@@ -1,3 +1,5 @@
+import itertools
+
 li = [1, 2, 3]
 isvisited = [False] * len(li)
 ans = []
@@ -16,3 +18,7 @@ def permutation(arr, n):
 
 permutation([], 0)
 print(ans)
+
+new_p = itertools.permutations(li, 3)
+print(type(new_p)) # itertools.permutations
+print(list(new_p))
